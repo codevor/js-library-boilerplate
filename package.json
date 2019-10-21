@@ -11,7 +11,7 @@
     "lint": "eslint src tests",
     "test": "jest --coverage --expand",
     "test:watch": "jest --watch",
-    "test:coverage": "cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
+    "coveralls": "cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "prepublish": "yarn lint && yarn test && yarn clean && yarn build:umd",
     "commit": "git-cz"
   },
