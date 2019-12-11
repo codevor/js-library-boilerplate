@@ -4,6 +4,9 @@
   "description": "js-library-boilerplate-description",
   "main": "dist/js-library-boilerplate.js",
   "unpkg": "dist/js-library-boilerplate.min.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "dev": "NODE_ENV=dev webpack --progress --colors --watch",
@@ -12,7 +15,7 @@
     "test": "jest --coverage --expand",
     "test:watch": "jest --watch",
     "coveralls": "cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
-    "prepublish": "yarn lint && yarn test && yarn clean && yarn build:umd",
+    "prepublish": "yarn clean && yarn build:umd",
     "commit": "git-cz"
   },
   "keywords": [],
@@ -42,7 +45,7 @@
     "husky": "^3.0.9",
     "jest": "^24.9.0",
     "rimraf": "^3.0.0",
-    "uglifyjs-webpack-plugin": "^2.2.0",
+    "terser-webpack-plugin": "^2.2.3",
     "webpack": "^4.41.1",
     "webpack-cli": "^3.3.9"
   },
